@@ -1,4 +1,9 @@
 package Model;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -42,7 +47,52 @@ public void setQuestion(StringProperty question) {
 public StringProperty getReponse() {
 	return reponse;
 }
-public void setReponse(StringProperty reponse) {
+public void setReponse(StringProperty reponse,String question) {
 	this.reponse = reponse;
 }
+public String[] verifier_reponse(String[] rep_ent){
+	String[] rep_juste=new String[4];
+	String[] rep_verifie=new String[4];
+	Connection cn=Connexion.Connecter();
+	Statement st=null;
+	ResultSet rs=null;
+	try {
+		st=cn.createStatement();
+		String sql="select reponse from quiz where question="+question;
+		rs=st.executeQuery(sql);
+		if(rs.next()) {
+			String str=rs.getString("reponse");
+			for(int i=0;i<str.length();i++) {
+				rep_juste[i]=str.substring(i,i+1);
+			}	
+			for(int i=0;i<4;i++) {
+			if(rep_ent[i]==rep_juste[i]) {
+				rep_verifie[i]="1";
+			}
+			else rep_verifie[i]="0";
+			}
+		}
+		
+		return rep_verifie;
+	}
+		catch(SQLException e){
+			e.printStackTrace();
+		}
+		
+	finally {
+		try {
+			cn.close();
+			st.close();
+			
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			
+		}
+			// TODO: handle exception
+		}
+	return null;
 }
+}
+
+
