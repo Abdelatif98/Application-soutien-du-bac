@@ -31,7 +31,7 @@
             <Font size="14.0" />
          </font>
       </JFXCheckBox>
-      <JFXButton layoutX="357.0" layoutY="348.0" prefHeight="39.0" prefWidth="131.0" ripplerFill="WHITE" style="-fx-background-color: FFB92D; -fx-opacity: 0.9; -fx-background-radius: 10; -fx-border-radius: 10;" text="Se connecter" textAlignment="CENTER">
+      <JFXButton fx:id="se_connecter" layoutX="357.0" layoutY="348.0" prefHeight="39.0" prefWidth="131.0" ripplerFill="WHITE" style="-fx-background-color: FFB92D; -fx-opacity: 0.9; -fx-background-radius: 10; -fx-border-radius: 10;" text="Se connecter" textAlignment="CENTER">
          <font>
             <Font name="Bodoni MT Bold" size="18.0" />
          </font>

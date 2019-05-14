@@ -4,6 +4,12 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 
@@ -50,4 +56,86 @@ public class Lire {
 	public void setNotes(StringProperty notes) {
 		this.notes = notes;
 	}
+	public String  consulter(int code) {
+		Connection cn=Connexion.Connecter();
+		Statement st=null;
+		ResultSet rs=null;
+		try {
+			st=cn.createStatement();
+			String sql="select notes from Lire where id_res="+code;
+			rs=st.executeQuery(sql);
+			if(rs.next()) {
+				return rs.getString("notes");
+			}
+			
+		}
+		catch(SQLException e){
+				e.printStackTrace();
+			}
+			
+		finally {
+			try {
+				cn.close();
+				st.close();
+				
+			}
+			catch (Exception e) {
+				e.printStackTrace();
+				
+			}
+				// TODO: handle exception
+			}
+		return null;
+		}
+	
+	public void sauvegarder(String texte,int code){
+		Connection cn=Connexion.Connecter();
+		Statement st=null;
+		//ResultSet rs=null;
+		try {
+			st=cn.createStatement();
+			String sql="update Lire set notes =texte  where id_res="+code;
+			st.executeUpdate(sql);
+		}
+		catch(SQLException e){
+				e.printStackTrace();
+			}
+		finally {
+			try {
+				cn.close();
+				st.close();
+				
+			}
+			catch (Exception e) {
+				e.printStackTrace();
+			}
+				// TODO: handle exception
+			}
+		}
+	
+public void supprimer(int code) {
+	Connection cn=Connexion.Connecter();
+	Statement st=null;
+	//ResultSet rs=null;
+	try {
+		st=cn.createStatement();
+		String sql="DELETE from Lire where id_res="+code;
+		st.executeUpdate(sql);
+	}
+	catch(SQLException e){
+			e.printStackTrace();
+		}
+	finally {
+		try {
+			cn.close();
+			st.close();
+			
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+			// TODO: handle exception
+		}
+	
+}
 }
