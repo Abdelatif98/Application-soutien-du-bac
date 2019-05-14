@@ -4,6 +4,11 @@ package Model;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.ResultSet;
+
 import javafx.beans.property.IntegerProperty;
 public class Passer {
 	private IntegerProperty  id_eleve= new SimpleIntegerProperty();
@@ -29,5 +34,28 @@ public class Passer {
 	public IntegerProperty getPoints() {
 		return points;
 	}
+	public void quiz_passer() {
+    	Connection cn = Connexion.Connecter();
+		Statement st = null;
+		ResultSet rs = null;
+		try {
+			st = cn.createStatement();
+            rs = st.executeQuery("INSERT INTO Passer VALUES(id_eleve,id_quiz,Passer.calcule_point())");
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		finally {
+			try {
+				cn.close();
+				st.close();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+
+			}
+		}
 	
-}
+	}
+	}
