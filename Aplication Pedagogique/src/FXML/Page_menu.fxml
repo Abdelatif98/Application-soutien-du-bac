@@ -17,11 +17,6 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" style="-fx-background-color: f9eccd;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="368.0" fitWidth="700.0" layoutY="-3.0" pickOnBounds="true" style="-fx-opacity: 0.3;">
-         <image>
-            <Image url="@../../ressources/images/5-handling-success-e1369159215250.jpg" />
-         </image>
-      </ImageView>
       <GridPane layoutX="1.0" layoutY="414.0" prefHeight="136.0" prefWidth="700.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="344.0" minWidth="10.0" prefWidth="143.0" />
@@ -116,9 +111,9 @@
             </StackPane>
          </children>
       </GridPane>
-      <HBox focusTraversable="true" layoutY="2.0" prefHeight="39.0" prefWidth="507.0">
+      <HBox focusTraversable="true" layoutY="2.0" prefHeight="39.0" prefWidth="700.0">
          <children>
-            <MenuButton contentDisplay="TOP" mnemonicParsing="false" prefHeight="39.0" prefWidth="125.0" style="-fx-background-color: FFB92D; -fx-background-radius: 10; -fx-border-radius: 10;" text="Résumés" textFill="WHITE">
+            <MenuButton contentDisplay="TOP" mnemonicParsing="false" prefHeight="39.0" prefWidth="129.0" style="-fx-background-color: FFB92D; -fx-background-radius: 10; -fx-border-radius: 10;" text="Résumés" textFill="WHITE">
               <items>
                 <MenuItem mnemonicParsing="false" text="Math" />
                 <MenuItem mnemonicParsing="false" text="Physique" />
@@ -128,7 +123,7 @@
                   <Font size="18.0" />
                </font>
             </MenuButton>
-            <MenuButton mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: e17612; -fx-background-radius: 10; -fx-border-radius: 10;" text="Quiz" textFill="#fcfcfc">
+            <MenuButton mnemonicParsing="false" prefHeight="39.0" prefWidth="128.0" style="-fx-background-color: f1760b; -fx-background-radius: 10; -fx-border-radius: 10;" text="Quiz" textFill="#fcfcfc">
                <items>
                   <MenuItem mnemonicParsing="false" text="Math" />
                   <MenuItem mnemonicParsing="false" text="Physique" />
@@ -138,7 +133,7 @@
                   <Font size="18.0" />
                </font>
             </MenuButton>
-            <MenuButton mnemonicParsing="false" prefHeight="39.0" prefWidth="129.0" style="-fx-background-color: FFB92D; -fx-background-radius: 10; -fx-border-radius: 10;" text="Examens" textFill="WHITE">
+            <MenuButton mnemonicParsing="false" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: FFB92D; -fx-background-radius: 10; -fx-border-radius: 10;" text="Examens" textFill="WHITE">
                <items>
                   <MenuItem mnemonicParsing="false" text="Math" />
                   <MenuItem mnemonicParsing="false" text="Physique" />
@@ -148,7 +143,17 @@
                   <Font size="18.0" />
                </font>
             </MenuButton>
-            <MenuButton mnemonicParsing="false" prefHeight="39.0" prefWidth="151.0" style="-fx-background-color: e17612; -fx-border-radius: 10; -fx-background-radius: 10;" text="Statestiques" textFill="WHITE">
+            <MenuButton mnemonicParsing="false" prefHeight="39.0" prefWidth="151.0" style="-fx-background-color: f1760b; -fx-border-radius: 10; -fx-background-radius: 10;" text="Statestiques" textFill="WHITE">
+               <items>
+                  <MenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" />
+               </items>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </MenuButton>
+            <MenuButton layoutX="372.0" layoutY="10.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="152.0" style="-fx-background-color: FFB92D; -fx-border-radius: 10; -fx-background-radius: 10;" text="Conseils" textFill="WHITE">
                <items>
                   <MenuItem mnemonicParsing="false" />
                   <MenuItem mnemonicParsing="false" />
@@ -160,7 +165,7 @@
             </MenuButton>
          </children>
       </HBox>
-      <Label layoutX="54.0" layoutY="369.0" prefHeight="38.0" prefWidth="275.0" text="L'exament est dans :" textFill="#e17612">
+      <Label layoutX="54.0" layoutY="369.0" prefHeight="38.0" prefWidth="275.0" text="L'exament est dans :" textFill="#f1760b">
          <font>
             <Font name="Candara" size="30.0" />
          </font>
@@ -170,7 +175,7 @@
             <Image url="@../../ressources/images/png-exclamation-open-2000.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="507.0" layoutY="3.0" prefHeight="39.0" prefWidth="194.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: FFA07A;" text="Tester votres équations" textAlignment="CENTER" wrapText="true">
+      <JFXButton layoutX="1.0" layoutY="186.0" prefHeight="63.0" prefWidth="194.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: FFA07A;" text="Tester votres équations" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Bodoni MT Bold" size="17.0" />
          </font>
