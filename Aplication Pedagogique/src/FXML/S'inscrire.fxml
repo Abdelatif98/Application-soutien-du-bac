@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.inscrireController">
    <children>
       <ImageView fitHeight="550.0" fitWidth="700.0" layoutX="1.0" layoutY="-1.0" pickOnBounds="true" style="-fx-opacity: 0.35;">
          <image>
@@ -28,7 +28,7 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <JFXTextField prefHeight="25.0" prefWidth="59.0" unFocusColor="#e7a820" />
+            <JFXTextField fx:id="textnom" focusColor="#ffb92d" prefHeight="25.0" prefWidth="59.0" unFocusColor="#f9eccd" />
             <Label prefHeight="17.0" prefWidth="154.0" text="Prénom">
                <VBox.margin>
                   <Insets />
@@ -37,33 +37,35 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <JFXTextField prefHeight="25.0" prefWidth="154.0" unFocusColor="#e7a820" />
+            <JFXTextField fx:id="textprenom" focusColor="#ffb92d" prefHeight="25.0" prefWidth="154.0" unFocusColor="#f9eccd" />
             <Label prefHeight="17.0" prefWidth="154.0" text="Pseudo">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <JFXTextField prefHeight="50.0" prefWidth="235.0" unFocusColor="#e7a820" />
+            <JFXTextField fx:id="textpseudo" focusColor="#ffb92d" prefHeight="50.0" prefWidth="235.0" unFocusColor="#f9eccd" />
             <Label prefHeight="17.0" prefWidth="154.0" text="Mot de passe">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <JFXTextField prefHeight="25.0" prefWidth="154.0" unFocusColor="#e7a820" />
+            <JFXTextField fx:id="textmotdepasse" focusColor="#ffb92d" prefHeight="25.0" prefWidth="154.0" unFocusColor="#f9eccd" />
             <Label prefHeight="17.0" prefWidth="154.0" text="Confirmer le mot de passe">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <JFXTextField prefHeight="25.0" prefWidth="154.0" unFocusColor="#e7a820" />
+            <JFXTextField fx:id="textconfirmation" focusColor="#ffb92d" prefHeight="25.0" prefWidth="154.0" unFocusColor="#f9eccd" />
          </children>
       </VBox>
-      <JFXButton layoutX="36.0" layoutY="503.0" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: FFB92D;" text="S'inscrire">
+      <JFXButton fx:id="btninscrire" layoutX="36.0" layoutY="503.0" onAction="#bienvenue" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: FFB92D;" text="S'inscrire">
          <font>
             <Font size="14.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="139.0" layoutY="503.0" prefHeight="30.0" prefWidth="141.0" style="-fx-background-color: f9eccd;" text="Déja membre">
+      <JFXButton fx:id="btnmembre" layoutX="139.0" layoutY="503.0" onAction="#membre" prefHeight="30.0" prefWidth="141.0" style="-fx-background-color: f9eccd;" text="Déja membre">
          <font>
             <Font size="14.0" />
          </font>
       </JFXButton>
+      <Label fx:id="lblerrorpseudo" layoutX="305.0" layoutY="247.0" prefHeight="17.0" prefWidth="141.0" text="Pseudo existe déja" textFill="#ff4242" visible="false" />
+      <Label fx:id="lblerrorconfirmation" layoutX="299.0" layoutY="409.0" prefHeight="17.0" prefWidth="182.0" text="Confirmez le bon mot de passe" textFill="#ff4c4c" visible="false" />
    </children>
 </AnchorPane>

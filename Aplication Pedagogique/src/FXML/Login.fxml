@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" style="-fx-background-color: f9eccd;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" style="-fx-background-color: f9eccd;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
    <children>
       <Label layoutX="451.0" layoutY="18.0" prefHeight="19.0" prefWidth="168.0" text="Si c'est votre première visite" textFill="#ffb92d">
          <font>
@@ -26,27 +26,27 @@
             <Image url="@../../ressources/images/icons8-lock-100.png" />
          </image>
       </ImageView>
-      <JFXCheckBox checkedColor="#ffb92d" layoutX="183.0" layoutY="354.0" prefHeight="26.0" prefWidth="148.0" text="Se rappeler de moi">
+      <JFXCheckBox fx:id="cheekrappeler" checkedColor="#ffb92d" layoutX="183.0" layoutY="354.0" prefHeight="26.0" prefWidth="148.0" text="Se rappeler de moi">
          <font>
             <Font size="14.0" />
          </font>
       </JFXCheckBox>
-      <JFXButton fx:id="se_connecter" layoutX="357.0" layoutY="348.0" prefHeight="39.0" prefWidth="131.0" ripplerFill="WHITE" style="-fx-background-color: FFB92D; -fx-opacity: 0.9; -fx-background-radius: 10; -fx-border-radius: 10;" text="Se connecter" textAlignment="CENTER">
+      <JFXButton fx:id="btnseconnecter" layoutX="357.0" layoutY="348.0" onAction="#connexion" prefHeight="39.0" prefWidth="131.0" ripplerFill="WHITE" style="-fx-background-color: FFB92D; -fx-opacity: 0.9; -fx-background-radius: 10; -fx-border-radius: 10;" text="Se connecter" textAlignment="CENTER">
          <font>
             <Font name="Bodoni MT Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="44.0" layoutY="13.0" text="Accueil">
+      <JFXButton fx:id="btnaccueil" layoutX="44.0" layoutY="13.0" onAction="#acceuil" text="Accueil">
          <font>
             <Font size="14.0" />
          </font>
       </JFXButton>
-      <JFXTextField focusColor="#ffb92d" layoutX="237.0" layoutY="202.0" prefHeight="25.0" prefWidth="240.0" promptText="Pseudo" unFocusColor="#4d4d4d">
+      <JFXTextField fx:id="textpseudo" focusColor="#ffb92d" layoutX="237.0" layoutY="202.0" prefHeight="25.0" prefWidth="240.0" promptText="Pseudo" unFocusColor="#4d4d4d">
          <font>
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <JFXTextField focusColor="#ffb92d" layoutX="237.0" layoutY="275.0" prefHeight="30.0" prefWidth="240.0" promptText="Mot de passe">
+      <JFXTextField fx:id="textpassword" focusColor="#ffb92d" layoutX="237.0" layoutY="275.0" prefHeight="30.0" prefWidth="240.0" promptText="Mot de passe">
          <font>
             <Font size="14.0" />
          </font>
@@ -56,10 +56,15 @@
             <Image url="@../../ressources/images/icons8-chevron-right-96.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="617.0" layoutY="15.0" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: FFB92D; -fx-border-radius: 10; -fx-background-radius: 10;" text="S'inscrire">
+      <JFXButton fx:id="btnsinscrire" layoutX="617.0" layoutY="15.0" onAction="#inscription" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: FFB92D; -fx-border-radius: 10; -fx-background-radius: 10;" text="S'inscrire">
          <font>
             <Font name="Candara" size="13.0" />
          </font>
       </JFXButton>
+      <Label fx:id="lblerror" layoutX="177.0" layoutY="131.0" prefHeight="39.0" prefWidth="314.0" text="Pseudo ou mot de passe incorect" textFill="#ff4848" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" style="-fx-background-color: f9eccd;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane centerShape="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" style="-fx-background-color: f9eccd;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <GridPane layoutX="1.0" layoutY="414.0" prefHeight="136.0" prefWidth="700.0">
         <columnConstraints>
@@ -143,11 +143,10 @@
                   <Font size="18.0" />
                </font>
             </MenuButton>
-            <MenuButton mnemonicParsing="false" prefHeight="39.0" prefWidth="151.0" style="-fx-background-color: f1760b; -fx-border-radius: 10; -fx-background-radius: 10;" text="Statestiques" textFill="WHITE">
+            <MenuButton mnemonicParsing="false" prefHeight="39.0" prefWidth="151.0" style="-fx-background-color: f1760b; -fx-border-radius: 10; -fx-background-radius: 10;" text="Statisques" textFill="WHITE">
                <items>
-                  <MenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Statistiques Scores" />
+                  <MenuItem mnemonicParsing="false" text="Statistiques Chapitres" />
                </items>
                <font>
                   <Font size="18.0" />
@@ -155,9 +154,9 @@
             </MenuButton>
             <MenuButton layoutX="372.0" layoutY="10.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="152.0" style="-fx-background-color: FFB92D; -fx-border-radius: 10; -fx-background-radius: 10;" text="Conseils" textFill="WHITE">
                <items>
-                  <MenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Bonnes Pratiques Examens " />
+                  <MenuItem mnemonicParsing="false" text="S'organiser pour reussir " />
+                  <MenuItem mnemonicParsing="false" text="Avoir confiance en soi" />
                </items>
                <font>
                   <Font size="18.0" />
