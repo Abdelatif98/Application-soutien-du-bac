@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -31,7 +32,7 @@
             <Font size="14.0" />
          </font>
       </JFXCheckBox>
-      <JFXButton fx:id="btnseconnecter" layoutX="357.0" layoutY="348.0" onAction="#connexion" prefHeight="39.0" prefWidth="131.0" ripplerFill="WHITE" style="-fx-background-color: FFB92D; -fx-opacity: 0.9; -fx-background-radius: 10; -fx-border-radius: 10;" text="Se connecter" textAlignment="CENTER">
+      <JFXButton fx:id="btnseconnecter" layoutX="354.0" layoutY="348.0" onAction="#connexion" prefHeight="39.0" prefWidth="134.0" ripplerFill="WHITE" style="-fx-background-color: FFB92D; -fx-opacity: 0.9; -fx-background-radius: 10; -fx-border-radius: 10;" text="Se connecter" textAlignment="CENTER">
          <font>
             <Font name="Bodoni MT Bold" size="18.0" />
          </font>
@@ -42,11 +43,6 @@
          </font>
       </JFXButton>
       <JFXTextField fx:id="textpseudo" focusColor="#ffb92d" layoutX="237.0" layoutY="202.0" prefHeight="25.0" prefWidth="240.0" promptText="Pseudo" unFocusColor="#4d4d4d">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </JFXTextField>
-      <JFXTextField fx:id="textpassword" focusColor="#ffb92d" layoutX="237.0" layoutY="275.0" prefHeight="30.0" prefWidth="240.0" promptText="Mot de passe">
          <font>
             <Font size="14.0" />
          </font>
@@ -66,5 +62,10 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <JFXPasswordField fx:id="textpassword" focusColor="#ffb92d" layoutX="237.0" layoutY="275.0" prefHeight="30.0" prefWidth="240.0" promptText="Mot de passe">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
    </children>
 </AnchorPane>

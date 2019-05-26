@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
+import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 
 import javafx.event.ActionEvent;
@@ -31,14 +32,15 @@ public class LoginController {
     private JFXTextField textpseudo;
 
     @FXML
-    private JFXTextField textpassword;
+    private JFXPasswordField textpassword;
 
     @FXML
     private JFXButton btnsinscrire;
     
     @FXML
     private Label lblerror;
-
+    
+    private static String pseudo;
     @FXML
     void acceuil(ActionEvent event) throws Exception {
     	Node node = (Node) event.getSource();
@@ -54,6 +56,7 @@ public class LoginController {
     void connexion(ActionEvent event) throws Exception {
     	boolean test;
     	Eleve e=new Eleve();
+    	setPseudo(textpseudo.getText());
     	test=e.verify_login(textpseudo.getText(),textpassword.getText());
     	if(test==true) {
     		Node node = (Node) event.getSource();
@@ -79,5 +82,13 @@ public class LoginController {
 	     stage.show();
     	
     }
+
+	public static String getPseudo() {
+		return pseudo;
+	}
+
+	public static void setPseudo(String pseudo) {
+		LoginController.pseudo = pseudo;
+	}
 
 }

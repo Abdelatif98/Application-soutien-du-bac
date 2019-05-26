@@ -31,6 +31,11 @@ public class Lire {
 	}
 
 	
+	public Lire() {
+		
+	}
+
+
 	public IntegerProperty getId_eleve() {
 		return id_eleve;
 	}
@@ -135,7 +140,42 @@ public void supprimer(int code) {
 			e.printStackTrace();
 		}
 			// TODO: handle exception
-		}
+	}
 	
+
+}
+public Traitement_chap[] count_res(String pseudo) throws Exception {
+	Connection cn = Connexion.Connecter();
+	Statement st = null;
+	ResultSet rs = null;
+	Traitement_chap ts= new Traitement_chap();
+	Traitement_chap tab_ts[]=new Traitement_chap[3];
+	int i=0;
+	try {
+		st = cn.createStatement();
+        rs = st.executeQuery("select m.libelle_mat,COUNT(l.id_eleve) from Eleve e,Lire l,Resumes r,Chapitre c,Matiere m where l.id_eleve=e.id_eleve and l.id_res=r.id_res and r.id_chap=c.id_chap and c.id_mat=m.id_mat and pseudo='abdo98' GROUP BY m.libelle_mat");
+        while(rs.next()){
+        	
+        	tab_ts[i]=new Traitement_chap(rs.getString(1),rs.getInt(2));
+    		i++;
+    		
+        }
+        
+        return tab_ts;
+	}
+	finally {
+		try {
+			cn.close();
+			st.close();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
+		
+}
+	
+
 }
 }
+

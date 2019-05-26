@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane centerShape="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" style="-fx-background-color: f9eccd;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane centerShape="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" style="-fx-background-color: f9eccd;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Page_menuController">
    <children>
       <GridPane layoutX="1.0" layoutY="414.0" prefHeight="136.0" prefWidth="700.0">
         <columnConstraints>
@@ -111,59 +113,6 @@
             </StackPane>
          </children>
       </GridPane>
-      <HBox focusTraversable="true" layoutY="2.0" prefHeight="39.0" prefWidth="700.0">
-         <children>
-            <MenuButton contentDisplay="TOP" mnemonicParsing="false" prefHeight="39.0" prefWidth="129.0" style="-fx-background-color: FFB92D; -fx-background-radius: 10; -fx-border-radius: 10;" text="Résumés" textFill="WHITE">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Math" />
-                <MenuItem mnemonicParsing="false" text="Physique" />
-                  <MenuItem mnemonicParsing="false" text="SVT" />
-              </items>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </MenuButton>
-            <MenuButton mnemonicParsing="false" prefHeight="39.0" prefWidth="128.0" style="-fx-background-color: f1760b; -fx-background-radius: 10; -fx-border-radius: 10;" text="Quiz" textFill="#fcfcfc">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Math" />
-                  <MenuItem mnemonicParsing="false" text="Physique" />
-                  <MenuItem mnemonicParsing="false" text="SVT" />
-               </items>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </MenuButton>
-            <MenuButton mnemonicParsing="false" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: FFB92D; -fx-background-radius: 10; -fx-border-radius: 10;" text="Examens" textFill="WHITE">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Math" />
-                  <MenuItem mnemonicParsing="false" text="Physique" />
-                  <MenuItem mnemonicParsing="false" text="SVT" />
-               </items>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </MenuButton>
-            <MenuButton mnemonicParsing="false" prefHeight="39.0" prefWidth="151.0" style="-fx-background-color: f1760b; -fx-border-radius: 10; -fx-background-radius: 10;" text="Statisques" textFill="WHITE">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Statistiques Scores" />
-                  <MenuItem mnemonicParsing="false" text="Statistiques Chapitres" />
-               </items>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </MenuButton>
-            <MenuButton layoutX="372.0" layoutY="10.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="152.0" style="-fx-background-color: FFB92D; -fx-border-radius: 10; -fx-background-radius: 10;" text="Conseils" textFill="WHITE">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Bonnes Pratiques Examens " />
-                  <MenuItem mnemonicParsing="false" text="S'organiser pour reussir " />
-                  <MenuItem mnemonicParsing="false" text="Avoir confiance en soi" />
-               </items>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </MenuButton>
-         </children>
-      </HBox>
       <Label layoutX="54.0" layoutY="369.0" prefHeight="38.0" prefWidth="275.0" text="L'exament est dans :" textFill="#f1760b">
          <font>
             <Font name="Candara" size="30.0" />
@@ -174,10 +123,82 @@
             <Image url="@../../ressources/images/png-exclamation-open-2000.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="1.0" layoutY="186.0" prefHeight="63.0" prefWidth="194.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: FFA07A;" text="Tester votres équations" textAlignment="CENTER" wrapText="true">
-         <font>
-            <Font name="Bodoni MT Bold" size="17.0" />
-         </font>
-      </JFXButton>
+      <JFXTabPane cache="true" layoutY="1.0" prefHeight="162.0" prefWidth="700.0" rotateGraphic="true" AnchorPane.topAnchor="1.0">
+         <tabs>
+            <Tab closable="false" style="-fx-background-color: FFB92D;" text="Résumés ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton layoutX="1.0" layoutY="14.0" prefHeight="25.0" prefWidth="115.0" text="Mathématiques" underline="true" />
+                        <JFXButton layoutX="6.0" layoutY="38.0" prefHeight="25.0" prefWidth="74.0" text="Physiques" underline="true">
+                           <effect>
+                              <Blend />
+                           </effect></JFXButton>
+                        <JFXButton layoutX="11.0" layoutY="63.0" prefHeight="27.0" prefWidth="38.0" text="SVT" underline="true" />
+                     </children>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab style="-fx-background-color: f1760b;" text=" Quiz         ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton layoutX="84.0" layoutY="14.0" prefHeight="25.0" prefWidth="115.0" text="Mathématiques" underline="true" />
+                        <JFXButton layoutX="84.0" layoutY="39.0" prefHeight="25.0" prefWidth="85.0" text="Physiques" underline="true" />
+                        <JFXButton layoutX="84.0" layoutY="64.0" prefHeight="25.0" prefWidth="56.0" text="SVT" underline="true" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: FFB92D;" text="Examens  ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="btn_math" layoutX="179.0" layoutY="14.0" onAction="#ListeMath" prefHeight="25.0" prefWidth="116.0" text="Mathématiques" underline="true" />
+                        <JFXButton fx:id="btn_phy" layoutX="179.0" layoutY="39.0" onAction="#ListePhy" prefHeight="25.0" prefWidth="90.0" text="Physiques" underline="true" />
+                        <JFXButton fx:id="btn_svt" layoutX="179.0" layoutY="64.0" onAction="#ListeSvt" prefHeight="25.0" prefWidth="65.0" text="SVT" underline="true" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: f1760b;" text="Statistiques  ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="btnscore" layoutX="292.0" layoutY="14.0" onAction="#affichescore" prefHeight="25.0" prefWidth="65.0" text="Scores" textAlignment="RIGHT" underline="true" />
+                        <JFXButton fx:id="btn_chap" layoutX="292.0" layoutY="39.0" onAction="#stat_chap" prefHeight="25.0" prefWidth="81.0" text="Chapitres" underline="true" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: FFB92D;" text="Conseils  ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton layoutX="390.0" layoutY="14.0" prefHeight="25.0" prefWidth="116.0" text="Bonnes Pratiques" underline="true" />
+                        <JFXButton layoutX="390.0" layoutY="39.0" prefHeight="25.0" prefWidth="116.0" text="Mieux s'organiser" underline="true" />
+                        <JFXButton layoutX="390.0" layoutY="64.0" prefHeight="25.0" prefWidth="116.0" text=" Confiance en soi " underline="true" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: f1760b;" text="Tester vos résultats       ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="125.0" prefWidth="669.0">
+                     <children>
+                        <JFXButton layoutX="508.0" layoutY="14.0" prefHeight="25.0" prefWidth="143.0" text="Resoudre Equations " underline="true" />
+                        <JFXButton layoutX="513.0" layoutY="39.0" prefHeight="25.0" prefWidth="133.0" text="Résolution Systemes" underline="true" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXTabPane>
    </children>
 </AnchorPane>
